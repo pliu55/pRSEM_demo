@@ -1,7 +1,7 @@
 [submodule "STAR"]
 	path = STAR
-#url = git@github.com:alexdobin/STAR
-  url = https://github.com/alexdobin/STAR
+  url = git@github.com:alexdobin/STAR
+ #url = https://github.com/alexdobin/STAR
 	branch = 2.4.0h
 [submodule "RSEM"]
 	path = RSEM
