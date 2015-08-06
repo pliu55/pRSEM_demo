@@ -16,7 +16,7 @@ Table of Contents
 ## <a name="Introduction"></a> Introduction
 Prior-enhanced RSEM (pRSEM)
 
-![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.pdf)
+![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
 
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
