@@ -14,9 +14,12 @@ Table of Contents
 * * *
 
 ## <a name="Introduction"></a> Introduction
-Prior-enhanced RSEM (pRSEM)
+Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilize external data set for the task of transcript abundance estimation. The workflow of pRSEM is shown in the figure below.
 
 ![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
+
+
+This repository is a mini-example for using prior-enhanced RSEM (pRSEM). It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. 
 
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
