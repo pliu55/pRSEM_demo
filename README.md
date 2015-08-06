@@ -1,4 +1,4 @@
-README for pRSEM's demo
+README for pRSEM demo
 ================
 
 Table of Contents
@@ -14,12 +14,11 @@ Table of Contents
 * * *
 
 ## <a name="Introduction"></a> Introduction
-Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilize external data set for the task of transcript abundance estimation. The workflow of pRSEM is shown in the figure below.
+Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes external data set for the task of transcript abundance estimation. Its workflow is shown in the following figure.
 
 ![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
 
-
-This repository is a mini-example for using prior-enhanced RSEM (pRSEM). It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. 
+This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details.
 
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
@@ -27,20 +26,20 @@ This repository is a mini-example for using prior-enhanced RSEM (pRSEM). It cont
 - __Bowtie__: aligned for ChIP-seq reads
 
 ## <a name="Input"></a> Input
-All of the following data sets are in folder 'input/'
+All of the following data sets are in the folder __input/__
 - RNA-seq data set, paired-end reads in FASTQ format
-  - mmliver_1.fa.gz
-  - mmliver_2.fa.gz
-- ChIP-seq
-  - mmliver_PolIIRep1.fq.gz
-  - mmliver_PolIIRep2.fq.gz
-  - mmliver_ChIPseqCtrl.fa.gz
+  - __mmliver_1.fa.gz__: first read mate 
+  - __mmliver_2.fa.gz__: second read mate
+- ChIP-seq in FASTQ format
+  - __mmliver_PolIIRep1.fq.gz__: replicate one for RNA polymerase II 
+  - __mmliver_PolIIRep2.fq.gz__: replicate two for RNA polymerase II
+  - __mmliver_ChIPseqCtrl.fa.gz__: replicate one of control
 - Genome sequence
-  - chr19.fa
+  - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It is automatically downloaded from UCSC's FTP during installation of this demo. 
 - Transcript annotation
-  - chr19.gtf
+  - __chr19.gtf__: Protein-coding genes from GENCODE mouse annotation version 4
 - Mappability
-  - mm10.36mer.chr19.fake.bigWig
+  - __mm10.36mer.chr19.fake.bigWig__: a mocked alignability files for mm10's chromosome 19.
 
 
 ## <a name="Usage"></a> Usage
