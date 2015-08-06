@@ -21,6 +21,8 @@ Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes ex
 
 This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo requires at least 2G hard drive space and it runs in 4 threads by default.
 
+Since this repository contains three submodules, please use command __git clone --recursive git://github.com/pliu55/pRSEM_demo__ to download this demo.
+
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
 - __STAR__: aligner for RNA-seq reads, in version 2.4.0h
