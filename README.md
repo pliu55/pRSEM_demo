@@ -43,27 +43,21 @@ All of the following data sets are in the folder __input/__
 
 
 ## <a name="Usage"></a> Usage
-- A simple approach: go to this demo's folder and type './run_pRSEM_demo.sh', it will do everything for you
+- A simple approach: go to this demo's folder and type __./run_pRSEM_demo.sh__, it will do everything for you
 
 or 
 
 - A step-by-step approach
   1. Go to this demo's folder.
-  2. Install all software packages: type 'make'. It will take about 15 minutes 
-     to install everything on a 2.4G core. It may run faster than that if user
-     had some R/Bioconductor libraries already installed.
-  3. Prepare genomic reference: type './scr/1_prsem_prep_ref.py'. It will take 
-     about 3 minutes to finish on 4 x 2.4GHz cores
-  4. Calculate expression: type './scr/2_prsem_calc_expr.py'. It will take 
-     about 5 minutes to finish on 4 x 2.4GHz cores.
+  2. Type __make__ to install all software packages. It will take about 15 minutes to install everything on a 2.4G core machine. It may run faster if user had some R/Bioconductor libraries pre-installed.
+  3. Type __./scr/1_prsem_prep_ref.py__ to prepare genomic reference. It will take about 3 minutes to finish on a 4 x 2.4GHz machine.
+  4. Type __./scr/2_prsem_calc_expr.py__ to calculate expression. It will take about 5 minutes to finish on 4 x 2.4GHz machine.
 
 ## <a name="Output"></a> Output
-All output files are in folder 'output/' created by the demo's script. 
+All output files are in folder __output/__ created by the demo's script. 
 
-- *'output/1_prepref/'* contains all genomic index files for pRSEM, STAR, and
-  bowtie
-- *'output/2_calcexpr/'* contains all output files from pRSEM's calculating 
-  expression step
+- __output/1_prepref/__ contains all genomic index files for pRSEM, STAR, and bowtie
+- __output/2_calcexpr/__ contains all output files from pRSEM's calculating expression step
 
 Note that, in order to shorten the running time as much as possible, I prepared extremely small (and unrealistic) sizes of ChIP-seq and RNA-seq files, as well as a very quick Gibbs sampling process. As a result, the final outputs may have some variations.
 
