@@ -15,11 +15,11 @@ Table of Contents
 * * *
 
 ## <a name="Introduction"></a> Introduction
-Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes external data set for the task of transcript abundance estimation. Its workflow is depicted in the following figure.
+Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes external data set for the task of transcript abundance estimation. The workflow of pRSEM is depicted in the following figure.
 
 ![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
 
-This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. The demo requires at least 2G space and it runs in 4 threads by default.
+This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo requires at least 2G hard drive space and it runs in 4 threads by default.
 
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
@@ -57,8 +57,8 @@ or
 ## <a name="Output"></a> Output
 All output files are in folder __output/__ created by this demo's scripts. 
 
-- __output/1_prepref/__ contains all output genomic index files for pRSEM, STAR, and bowtie
-- __output/2_calcexpr/__ contains all output files from pRSEM's calculating expression step
+- __1_prepref/__ contains all output genomic index files for pRSEM, STAR, and bowtie
+- __2_calcexpr/__ contains all output files from pRSEM's calculating expression step
 
 Note that, in order to shorten the running time as much as possible, I prepared extremely small (and unrealistic) sizes of ChIP-seq and RNA-seq files, as well as a very quick Gibbs sampling process. As a result, the final outputs may have variations.
 
