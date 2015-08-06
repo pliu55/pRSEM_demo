@@ -1,17 +1,18 @@
-DATA = data/chr19.fa
+CHROM = input/chr19.fa
 BOWTIE = bowtie/to_make.flag
 STAR = STAR/source/to_make.flag
 RSEM = RSEM/to_make.flag
 
 .PHONY : all clean
 
-all : ${BOWTIE} ${DATA} ${STAR} ${RSEM}
+all : ${BOWTIE} ${CHROM} ${STAR} ${RSEM}
 
-${DATA} :
+${CHROM} :
 	if [ ! -e $@ ]; then cd ${@D} ; \
 	wget -nc ftp://hgdownload.soe.ucsc.edu/goldenPath/mm10/chromosomes/$(@F).gz; \
 	gzip -d $(@F).gz; \
 	chmod -w $(@F); \
+	cd ../; \
 	fi
 
 ${BOWTIE} : 
