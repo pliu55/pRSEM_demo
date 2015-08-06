@@ -17,11 +17,12 @@ Table of Contents
 Prior-enhanced RSEM (pRSEM)
 
 ## <a name="Software"></a> Software
-- RSEM 
-- STAR
-- Bowtie
+- __pRSEM__: prior-enhanced RSEM 
+- __STAR__: aligner for RNA-seq reads
+- __Bowtie__: aligned for ChIP-seq reads
 
 ## <a name="Input"></a> Input
+All of the following data sets are in directory 'input/'
 - RNA-seq data set, paired-end reads in FASTQ format
   - mmliver_1.fa.gz
   - mmliver_2.fa.gz
