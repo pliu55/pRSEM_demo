@@ -29,10 +29,9 @@ All of the following data sets are in folder 'input/'
   - mmliver_1.fa.gz
   - mmliver_2.fa.gz
 - ChIP-seq
-  - mmliver.narrowPeak.gz
-  - mmliver.PolIIRep1.fq.gz
-  - mmliver.PolIIRep2.fq.gz
-  - mmliver.ctrl.fa.gz
+  - mmliver_PolIIRep1.fq.gz
+  - mmliver_PolIIRep2.fq.gz
+  - mmliver_ChIPseqCtrl.fa.gz
 - Genome sequence
   - chr19.fa
 - Transcript annotation
@@ -51,12 +50,18 @@ or
   2. Install all software packages: type 'make'. It will take about 15 minutes 
      to install everything on a 2.4G core. It may run faster than that if user
      had some R/Bioconductor libraries already installed.
-  3. Prepare genomic reference: type './scr/01_prsem_prep_ref.py'. It will take 
-     about 4 minutes on a 4x2.4GHz cores.
-  4. Calculate expression: type './scr/02_prsem_calc_expr.py'. 
+  3. Prepare genomic reference: type './scr/1_prsem_prep_ref.py'. It will take 
+     about 3 minutes to finish on 4 x 2.4GHz cores
+  4. Calculate expression: type './scr/2_prsem_calc_expr.py'. It will take 
+     about 5 minutes to finish on 4 x 2.4GHz cores.
 
 ## <a name="Output"></a> Output
-All output files are in folder 'output/'
+All output files are in folder 'output/' created by the demo's script. 
+
+- *'output/1_prepref/'* contains all genomic index files for pRSEM, STAR, and
+  bowtie
+- *'output/2_calcexpr/'* contains all output files from pRSEM's calculating 
+  expression step
 
 Note that, in order to shorten the running time as much as possible, I prepared extremely small (and unrealistic) sizes of ChIP-seq and RNA-seq files, as well as a very quick Gibbs sampling process. As a result, the final outputs may have some variations.
 
