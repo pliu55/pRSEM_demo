@@ -1,0 +1,7 @@
+!*.gz
+input/chr19.fa
+bowtie/bowtie
+bowtie/bowtie-build
+bowtie/bowtie-inspect
+STAR/source/STAR
+output/
