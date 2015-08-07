@@ -19,7 +19,13 @@ Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes ex
 
 ![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
 
-This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo requires at least 2G hard drive space and it runs in 4 threads by default.
+This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo requires at least 2G hard drive space and it runs in 4 threads by default. The installation and running will take about 20 to 30 minutes on a 4 x 2.4GHz core machine depending on the R/Bioconductor libraries that the user has already installed.
+
+Since this repository contains three submodules, please use the command 
+```
+git clone --recursive git@github.com:pliu55/pRSEM_demo
+```
+to clone this demo.
 
 ## <a name="Software"></a> Software
 - __pRSEM__: prior-enhanced RSEM 
@@ -44,15 +50,15 @@ All of the following data sets are in the folder __input/__
 
 
 ## <a name="Usage"></a> Usage
-- A simple approach: type __./run_pRSEM_demo.sh__ under this demo's folder, it will install and run this demo.
+- A simple approach: type `./run_pRSEM_demo.sh` under this demo's folder, it will install and run this demo.
 
 or 
 
 - A step-by-step approach
   1. Go to this demo's folder.
-  2. Type __make__ to install all software packages. It will take about 15 minutes to install everything on a 2.4G core machine. It may run faster if the user had some pRSEM-dependent R/Bioconductor libraries installed.
-  3. Type __./scr/1_prsem_prep_ref.py__ to prepare genomic references. It will take about 3 minutes to finish on a 4 x 2.4GHz machine.
-  4. Type __./scr/2_prsem_calc_expr.py__ to quantify RNA-seq data using RNA polymearse II ChIP-seq data. It will take about 5 minutes to finish on 4 x 2.4GHz machine.
+  2. Type `make` to install all software packages. It will take about 15 minutes to install everything on a 2.4G core machine. It may run faster if the user had some pRSEM-dependent R/Bioconductor libraries installed.
+  3. Type `./scr/1_prsem_prep_ref.py` to prepare genomic references. It will take about 3 minutes to finish on a 4 x 2.4GHz machine.
+  4. Type `./scr/2_prsem_calc_expr.py` to quantify RNA-seq data using RNA polymearse II ChIP-seq data. It will take about 5 minutes to finish on 4 x 2.4GHz machine.
 
 ## <a name="Output"></a> Output
 All output files are in folder __output/__ created by this demo's scripts. 
