@@ -33,7 +33,7 @@ to clone this demo.
 - __Bowtie__: aligned for ChIP-seq reads, in version 1.0.1
 
 ## <a name="Input"></a> Input
-All of the following data sets are in the folder __input/__
+All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data are a small subset of ENCODE2 mouse Mel cell line's data sets. Although they are derived from a cell line rather than tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
 - RNA-seq, paired-end reads in FASTQ format
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
