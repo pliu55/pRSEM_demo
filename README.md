@@ -24,13 +24,12 @@ This repository is a mini-example for running pRSEM. It contains all the require
 
 ## <a name="Download"></a> Download
 There are two ways to download this demo
-- http
-- git clone
-Since this repository contains three submodules, please use the command 
+- download [a tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.tar.gz) or [a gzip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.zip) of this demo and all submodules
+- use the command 
 ```
 git clone --recursive git@github.com:pliu55/pRSEM_demo
 ```
-to clone this demo.
+to clone this demo and all three submodules.
 
 ## <a name="Software"></a> Software
 - [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM 
