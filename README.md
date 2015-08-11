@@ -44,7 +44,7 @@ All of the following data sets are under the folder __input/__. The RNA-seq and 
 - Genome sequence
   - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
 - Transcript annotation
-  - __chr19.gtf__: Protein-coding genes from [GENCODE mouse release M4](http://www.gencodegenes.org/mouse_releases/4.html)
+  - __chr19.gtf__: Protein-coding genes on chromsome 19 from [GENCODE mouse release M4](http://www.gencodegenes.org/mouse_releases/4.html)
 - Mappability
   - __mm10.36mer.chr19.fake.bigWig__: a mocked alignability files for mm10's chromosome 19.
 
