@@ -7,7 +7,7 @@ Table of Contents
 * [Introduction](#Introduction)
 * [Download](#Download)
 * [System Requirements](#System Requirements)
-* [Software](#Software)
+* [Submodules](#Submodules)
 * [Input](#Input)
 * [Usage](#Usage)
 * [Output](#Output)
@@ -32,7 +32,8 @@ There are two ways to download this demo and all three submodules
 - Python 2.7
 - 2G hard drive space
 
-## <a name="Software"></a> Software
+## <a name="Submodules"></a> Submodules
+This demo requires three submodules:
 - [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM 
 - [STAR](https://github.com/alexdobin/STAR): aligner for RNA-seq reads, in version 2.4.0h
 - [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, in version 1.0.1
