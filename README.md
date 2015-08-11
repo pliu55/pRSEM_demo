@@ -28,23 +28,23 @@ git clone --recursive git@github.com:pliu55/pRSEM_demo
 to clone this demo.
 
 ## <a name="Software"></a> Software
-- __pRSEM__: prior-enhanced RSEM 
-- __STAR__: aligner for RNA-seq reads, in version 2.4.0h
-- __Bowtie__: aligned for ChIP-seq reads, in version 1.0.1
+- [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM 
+- [STAR](https://github.com/alexdobin/STAR): aligner for RNA-seq reads, in version 2.4.0h
+- [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, in version 1.0.1
 
 ## <a name="Input"></a> Input
-All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data are a small subset of ENCODE2 mouse Mel cell line's data sets. Although they are derived from a cell line rather than tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
-- RNA-seq, paired-end reads in FASTQ format
+All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from ENCODE2 mouse Mel cell line's data sets. Although they are derived from a cell line rather than tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
+- RNA-seq, paired-end reads in FASTQ format, a small subset of [the RNA-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000CWE/) 
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
 - ChIP-seq in FASTQ format
-  - __mmliver_PolIIRep1.fq.gz__: replicate one for RNA polymerase II 
-  - __mmliver_PolIIRep2.fq.gz__: replicate two for RNA polymerase II
-  - __mmliver_ChIPseqCtrl.fa.gz__: replicate one for control
+  - __mmliver_PolIIRep1.fq.gz__: replicate one for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_PolIIRep2.fq.gz__: replicate two for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 2](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_ChIPseqCtrl.fa.gz__: replicate one for control, a small subset of the [the control ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUF/)
 - Genome sequence
   - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
 - Transcript annotation
-  - __chr19.gtf__: Protein-coding genes from GENCODE's mouse annotation version 4
+  - __chr19.gtf__: Protein-coding genes from [GENCODE mouse release M4](http://www.gencodegenes.org/mouse_releases/4.html)
 - Mappability
   - __mm10.36mer.chr19.fake.bigWig__: a mocked alignability files for mm10's chromosome 19.
 
