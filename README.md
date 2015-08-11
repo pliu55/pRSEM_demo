@@ -6,6 +6,7 @@ Table of Contents
 
 * [Introduction](#Introduction)
 * [Download](#Download)
+* [System Requirements](#System Requirements)
 * [Software](#Software)
 * [Input](#Input)
 * [Usage](#Usage)
@@ -20,12 +21,16 @@ Prior-enhanced RSEM (pRSEM) is an RNA-seq quantification method that utilizes ex
 
 ![alt text](https://github.com/pliu55/pRSEM_demo/blob/master/input/workflow.jpg)
 
-This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo requires at least 2G hard drive space and it runs in 4 threads by default. The installation and running will take about 20 to 30 minutes on a 4 x 2.4GHz core machine depending on the R/Bioconductor libraries that the user has already installed.
+This repository is a mini-example for running pRSEM. It contains all the required software packages, input files, installation and running scripts. Each component is described below in details. This demo runs in 4 threads by default. The installation and running will take about 20 to 30 minutes on a 4 x 2.4GHz core machine depending on the R/Bioconductor libraries that the user has already installed.
 
 ## <a name="Download"></a> Download
 There are two ways to download this demo and all three submodules
 - download the [tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.tar.gz) or [ gzip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.zip) via http
 - use git command `git clone --recursive git@github.com:pliu55/pRSEM_demo`
+
+## <a name="System Requirements"></a> System Requirements
+- Python 2.7
+- 2G hard drive space
 
 ## <a name="Software"></a> Software
 - [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM 
