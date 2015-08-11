@@ -33,7 +33,7 @@ to clone this demo.
 - [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, in version 1.0.1
 
 ## <a name="Input"></a> Input
-All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from ENCODE2 mouse Mel cell line's data sets. Although they are derived from a cell line rather than tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
+All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
 - RNA-seq, paired-end reads in FASTQ format, a small subset of [the RNA-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000CWE/) 
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
@@ -50,15 +50,8 @@ All of the following data sets are under the folder __input/__. The RNA-seq and 
 
 
 ## <a name="Usage"></a> Usage
-- A simple approach: type `./run_pRSEM_demo.sh` under this demo's folder, it will install and run this demo.
+Go to this demo's fold and type `./run_pRSEM_demo.sh`. This script will install all required packages and run this demo.
 
-or 
-
-- A step-by-step approach
-  1. Go to this demo's folder.
-  2. Type `make` to install all software packages. It will take about 15 minutes to install everything on a 2.4G core machine. It may run faster if the user had some pRSEM-dependent R/Bioconductor libraries installed.
-  3. Type `./scr/1_prsem_prep_ref.py` to prepare genomic references. It will take about 3 minutes to finish on a 4 x 2.4GHz machine.
-  4. Type `./scr/2_prsem_calc_expr.py` to quantify RNA-seq data using RNA polymearse II ChIP-seq data. It will take about 5 minutes to finish on 4 x 2.4GHz machine.
 
 ## <a name="Output"></a> Output
 All output files are in folder __output/__ created by this demo's scripts. 
