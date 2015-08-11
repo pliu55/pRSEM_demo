@@ -45,9 +45,9 @@ All of the following data sets are under the folder __input/__. The RNA-seq and 
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
 - ChIP-seq in FASTQ format
-  - __mmliver_PolIIRep1.fq.gz__: replicate one for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUC/)
-  - __mmliver_PolIIRep2.fq.gz__: replicate two for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 2](https://www.encodeproject.org/experiments/ENCSR000EUC/)
-  - __mmliver_ChIPseqCtrl.fa.gz__: replicate one for control, a small subset of the [the control ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUF/)
+  - __mmliver_PolIIRep1.fq.gz__: replicate 1 for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_PolIIRep2.fq.gz__: replicate 2 for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 2](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_ChIPseqCtrl.fa.gz__: replicate 1 for control, a small subset of the [the control ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUF/)
 - Genome sequence
   - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
 - Transcript annotation
