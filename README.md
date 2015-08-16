@@ -25,7 +25,7 @@ This repository is a mini-example for running pRSEM. It contains all the require
 
 ## <a name="Download"></a> Download
 There are two ways to download this demo and all three required submodules
-- Download the [tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.tar.gz) or [ gzip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.zip) via https. They are also listed on [the release page](https://github.com/pliu55/pRSEM_demo/releases) with name __pRSEM_demo_and_AllSubmodules__ 
+- Download the [tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.tar.gz) or [ zip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.1/pRSEM_demo_and_AllSubmodules.zip) via https. They are also listed on [the release page](https://github.com/pliu55/pRSEM_demo/releases) with name __pRSEM_demo_and_AllSubmodules__ 
 - Use git command `git clone --recursive git@github.com:pliu55/pRSEM_demo`
 
 ## <a name="System Requirements"></a> System Requirements
@@ -40,14 +40,14 @@ This demo requires three submodules:
 - [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, in version 1.0.1
 
 ## <a name="Input"></a> Input
-All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword 'mmliver' just to be consistent with the examples given in pRSEM's documentation.    
+All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in pRSEM's documentation.    
 - RNA-seq, paired-end reads in FASTQ format, a small subset of [the RNA-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000CWE/) 
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
 - ChIP-seq in FASTQ format
-  - __mmliver_PolIIRep1.fq.gz__: replicate one for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUC/)
-  - __mmliver_PolIIRep2.fq.gz__: replicate two for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 2](https://www.encodeproject.org/experiments/ENCSR000EUC/)
-  - __mmliver_ChIPseqCtrl.fa.gz__: replicate one for control, a small subset of the [the control ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUF/)
+  - __mmliver_PolIIRep1.fq.gz__: replicate 1 for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_PolIIRep2.fq.gz__: replicate 2 for RNA polymerase II, a small subset of [the Pol II ChIP-seq data on Mel's biological replicate 2](https://www.encodeproject.org/experiments/ENCSR000EUC/)
+  - __mmliver_ChIPseqCtrl.fa.gz__: replicate 1 for control, a small subset of the [the control ChIP-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000EUF/)
 - Genome sequence
   - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
 - Transcript annotation
