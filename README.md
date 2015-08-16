@@ -29,9 +29,10 @@ There are two ways to download this demo and all three required submodules
 - Use git command `git clone --recursive git@github.com:pliu55/pRSEM_demo`
 
 ## <a name="System Requirements"></a> System Requirements
+- Hard drive space > 2G
+- Perl >= 5.8.8
 - Python >= 2.7.3
 - R >= 3.1.2
-- Hard drive space > 2G
 
 ## <a name="Submodules"></a> Submodules
 This demo requires three submodules:
