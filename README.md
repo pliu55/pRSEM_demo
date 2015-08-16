@@ -30,9 +30,9 @@ There are two ways to download this demo and all three required submodules
 
 ## <a name="System Requirements"></a> System Requirements
 - Hard drive space > 2G
-- Perl >= 5.8.8
-- Python >= 2.7.3
-- R >= 3.1.2
+- Perl version >= 5.8.8
+- Python version >= 2.7.3
+- R version >= 3.1.2
 
 ## <a name="Submodules"></a> Submodules
 This demo requires three submodules:
