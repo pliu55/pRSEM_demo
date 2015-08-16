@@ -36,9 +36,9 @@ There are two ways to download this demo and all three required submodules
 
 ## <a name="Submodules"></a> Submodules
 This demo requires three submodules:
-- [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM 
-- [STAR](https://github.com/alexdobin/STAR): aligner for RNA-seq reads, in version 2.4.0h
-- [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, in version 1.0.1
+- [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM, version 1.2.22
+- [STAR](https://github.com/alexdobin/STAR): aligner for RNA-seq reads, version 2.4.0h
+- [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, version 1.0.1
 
 ## <a name="Input"></a> Input
 All of the following data sets are under the folder __input/__. The RNA-seq and ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in pRSEM's documentation.    
