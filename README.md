@@ -62,12 +62,11 @@ Go to this demo's fold and type `./run_pRSEM_demo.sh`. This script will install 
 
 
 ## <a name="Output"></a> Output
-All output files are in folder __output/__ created by this demo's scripts. 
+All output files will be stored in two folders under __output/__:
+- __genome_references/__ contains all output genomic index files for pRSEM, STAR, and bowtie.
+- __quantification_results/__ contains all output files from pRSEM's calculating expression step. 
 
-- __1_prepref/__ contains all output genomic index files for pRSEM, STAR, and bowtie
-- __2_calcexpr/__ contains all output files from pRSEM's calculating expression step
-
-Note that, in order to shorten the running time as much as possible, I prepared extremely small (and unrealistic) sizes of ChIP-seq and RNA-seq files, as well as a very quick Gibbs sampling process. As a result, the final outputs may have variations.
+Note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes and Gibbs sampling were set to run in just 10% of the default steps. As a result, the final outputs may have variations.
 
 ## <a name="Contact"></a> Contact
 Got a question? Please post it at [RSEM Users group](https://groups.google.com/forum/#!forum/rsem-users) with keyword __pRSEM__ in the title.  
