@@ -62,12 +62,26 @@ Go to this demo's fold and type `./run_pRSEM_demo.sh`. This script will install 
 
 
 ## <a name="Output"></a> Output
-All output files will be stored in two folders under __output/__:
+All output files will be stored in the following two folders under __output/__:
 - __genome_references/__: genomic index files for pRSEM, STAR, and bowtie
 - __quantification_results/__: output files from pRSEM's calculating expression step. They are organized in the same way as [RSEM's output](http://deweylab.biostat.wisc.edu/rsem/rsem-calculate-expression.html#output).
 
+One file worth to note is __output/quantification_results/demo.stat/demo_prsem.all_tr_features__. It includes all the features to derive and assign pRSEM prior. The descript for each columns are:
+- __trid__: transcript ID from input annotation
+- __geneid__: gene ID from input anntation
+- __chrom__: 
+- __strand__:
+- __start__:
+- __end__:
+- __tss_mpp__:
+- __body_mpp__:
+- __tes_mpp__:
+- __pme_count__:
+- __tss__:
+- __tss_pk__:
+- __is_training__:
 
-Note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final outputs may have variations.
+In order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final outputs may have variations.
 
 ## <a name="Contact"></a> Contact
 Got a question? Please post it at [RSEM Users group](https://groups.google.com/forum/#!forum/rsem-users) with keyword __pRSEM__ in the title.  
