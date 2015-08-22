@@ -67,19 +67,20 @@ All output files will be stored in the following two folders under __output/__:
 - __quantification_results/__: output files from pRSEM's calculating expression step. They are organized in the same way as [RSEM's output](http://deweylab.biostat.wisc.edu/rsem/rsem-calculate-expression.html#output).
 
 One file worth to note is __output/quantification_results/demo.stat/demo_prsem.all_tr_features__. It includes all the features to derive and assign pRSEM prior. The descript for each columns are:
-- __trid__: transcript ID from input annotation
-- __geneid__: gene ID from input anntation
-- __chrom__: isoform's chromosome
-- __strand__: isoform's strand
-- __start__: isoform's lowest genomic loci
-- __end__: isoform's highest genomic loci
-- __tss_mpp__: average mappability of [TSS-500bp, TSS+500bp], where TSS is isoform's transcription start site
-- __body_mpp__: average mappability of (TSS+500bp, TES-500bp), where TES is isoform's transcription end site
-- __tes_mpp__: average mappability of [TES-500bp, TES+500bp]
-- __pme_count__: isoform's posterior mean count
-- __tss__: genomic loci of isoform's TSS
-- __tss_pk__: 1 if isoform's [TSS-500bp, TSS+500bp] region overlaps with a RNA Pol II peak, 0 otherwise
-- __is_training__: 1 if isoform is in the training set where Pol II prior is learned, 0 otherwise
+
+1. __trid__: transcript ID from input annotation
+2. __geneid__: gene ID from input anntation
+3. __chrom__: isoform's chromosome
+4. __strand__: isoform's strand
+5. __start__: isoform's lowest genomic loci
+6. __end__: isoform's highest genomic loci
+7. __tss_mpp__: average mappability of [TSS-500bp, TSS+500bp], where TSS is isoform's transcription start site
+8. __body_mpp__: average mappability of (TSS+500bp, TES-500bp), where TES is isoform's transcription end site
+9. __tes_mpp__: average mappability of [TES-500bp, TES+500bp]
+10. __pme_count__: isoform's posterior mean count
+11. __tss__: genomic loci of isoform's TSS
+12. __tss_pk__: 1 if isoform's [TSS-500bp, TSS+500bp] region overlaps with a RNA Pol II peak, 0 otherwise
+13. __is_training__: 1 if isoform is in the training set where Pol II prior is learned, 0 otherwise
 
 In order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final outputs may have variations.
 
