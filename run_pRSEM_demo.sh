@@ -7,8 +7,8 @@ starpath="$demodir/STAR/source/"
 bowtiepath="$demodir/bowtie/"
 
 outputdir="$demodir/output/"
-refdir="$outputdir/1_prepref/"
-expdir="$outputdir/2_calcexpr/"
+refdir="$outputdir/genome_references/"
+expdir="$outputdir/quantification_results/"
 
 runid='demo'
 chrom='chr19'
