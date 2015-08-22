@@ -59,7 +59,11 @@ All of the following data sets are under the folder __input/__. The RNA-seq and 
 
 
 ## <a name="Usage"></a> Usage
-Go to this demo's fold and type `./run_pRSEM_demo.sh`. This script will install all required packages and run this demo.
+Go to this demo's fold and type 
+```
+./run_pRSEM_demo.sh
+``` 
+This script will install all required packages and run this demo.
 
 
 ## <a name="Output"></a> Output
