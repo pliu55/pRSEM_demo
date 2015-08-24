@@ -34,6 +34,8 @@ There are two ways to download this demo and all three required submodules
 - Perl version >= 5.8.8
 - Python version >= 2.7.3
 - R version >= 3.1.2
+- POSIX Threads
+- Boost (C++ libraries)
 
 ## <a name="Submodules"></a> Submodules
 This demo requires three submodules:
