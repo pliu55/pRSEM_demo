@@ -8,8 +8,8 @@ Table of Contents
 * [Download](#Download)
 * [System Requirements](#System Requirements)
 * [Submodules](#Submodules)
-* [Input](#Input)
 * [Usage](#Usage)
+* [Input](#Input)
 * [Output](#Output)
 * [Contact](#Contact)
 * [License](#License)
@@ -43,6 +43,20 @@ This demo requires three submodules:
 - [STAR](https://github.com/alexdobin/STAR): aligner for RNA-seq reads, version 2.4.0h
 - [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, version 1.0.1
 
+## <a name="Usage"></a> Usage
+Go to this demo's fold and type 
+```
+./run_pRSEM_demo.sh
+``` 
+This script will carry out the following jobs:
+
+1. Install Bowtie, STAR, RSEM, and required libraries not yet installed by users
+2. Prepare genome references for Bowtie, STAR, and RSEM
+3. Derive prior parameters from RNA Polymerase II ChIP-seq data and use them to quantify RNA-seq data
+4. Derive prior parameters from a combination of four histone modfication ChIP-seq data sets and use them to quantify RNA-seq data
+5. Perform a consistency test using a combination of four histone modification ChIP-seq data sets as the external data
+6. Perform a consistency test using RNA Polymerase II ChIP-seq peaks as the external data
+
 ## <a name="Input"></a> Input
 All of the following data sets are under the folder __input/__. The RNA-seq and PolII ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in pRSEM's documentation. The four histone modification ChIP-seq data sets were derived from [Lara-Astiaso D et al. Science 2014 345:943](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59636). 
 - RNA-seq, paired-end reads in FASTQ format, a small subset of [the RNA-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000CWE/) 
@@ -60,19 +74,11 @@ All of the following data sets are under the folder __input/__. The RNA-seq and 
   - __H3K4me2.fastq.gz__: a small subset of [H3K4me2 modification ChIP-seq data from LT_HSC cells](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1441301)
   - __H3K4me3.fastq.gz__: a small subset of [H3K4me3 modification ChIP-seq data from LT_HSC cells](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM1441317)
 - Genome sequence
-  - __chr19.fa__: Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
+  - __chr19.fa.gz__: gzipped Chromosome 19 of mouse's mm10 assembly. It will be automatically downloaded from UCSC's FTP during the installation of this demo. 
 - Transcript annotation
-  - __chr19.gtf__: Protein-coding genes on chromsome 19 from [GENCODE mouse release M4](http://www.gencodegenes.org/mouse_releases/4.html)
+  - __chr19.gtf.gz__: gzipped Protein-coding genes on chromsome 19 from [GENCODE mouse release M4](http://www.gencodegenes.org/mouse_releases/4.html)
 - Mappability
   - __mm10.36mer.chr19.fake.bigWig__: a mocked alignability files for mm10's chromosome 19
-
-
-## <a name="Usage"></a> Usage
-Go to this demo's fold and type 
-```
-./run_pRSEM_demo.sh
-``` 
-This script will install all required packages and run this demo.
 
 
 ## <a name="Output"></a> Output
