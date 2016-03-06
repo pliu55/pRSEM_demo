@@ -58,7 +58,7 @@ This script will carry out the following jobs:
 6. Perform a consistency test using RNA Polymerase II ChIP-seq peaks as the external data
 
 ## <a name="Input"></a> Input
-All of the following data sets are under the folder __input/__. The RNA-seq and PolII ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in pRSEM's documentation. The four histone modification ChIP-seq data sets were derived from [Lara-Astiaso D et al. Science 2014 345:943](http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59636). 
+All of the following data sets are under the folder __input/__. The RNA-seq and PolII ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in pRSEM's documentation. The four histone modification ChIP-seq data sets were derived from [Lara-Astiaso D and Weiner et al. *Science* 2014 345:943](http://science.sciencemag.org/content/345/6199/943.full). 
 - RNA-seq, paired-end reads in FASTQ format, a small subset of [the RNA-seq data on Mel's biological replicate 1](https://www.encodeproject.org/experiments/ENCSR000CWE/) 
   - __mmliver_1.fa.gz__: first mate 
   - __mmliver_2.fa.gz__: second mate
