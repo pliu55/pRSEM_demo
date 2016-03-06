@@ -1,5 +1,6 @@
 !*.gz
 input/chr19.fa
+input/chr19.gtf
 bowtie/bowtie
 bowtie/bowtie-build
 bowtie/bowtie-inspect
