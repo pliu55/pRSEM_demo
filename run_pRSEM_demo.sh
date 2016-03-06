@@ -38,10 +38,10 @@ H3K4me3_reads="$inputdir/H3K4me3.fastq.gz"
 
 
 ## remove output/ if exists
-#if [ -e $outputdir ] 
-#  then
-#    rm -fr $outputdir
-#fi
+ if [ -e $outputdir ] 
+   then
+     rm -fr $outputdir
+ fi
 
 ## create $fgtf
 if [ ! -f $fgtf ]
@@ -59,46 +59,46 @@ fi
 
 
 ## install pRSEM, STAR, and bowtie
-#make
+ make
 
 
 ## prepare reference
-#mkdir -p $refdir
-#$demodir/RSEM/rsem-prepare-reference \
-# --gtf $fgtf \
-# --star \
-# --star-path $starpath \
-# -p $nthr \
-# --bowtie-path $bowtiepath \
-# --index-genome \
-# -q  \
-# $chrfa $refdir/$runid
+ mkdir -p $refdir
+ $demodir/RSEM/rsem-prepare-reference \
+  --gtf $fgtf \
+  --star \
+  --star-path $starpath \
+  -p $nthr \
+  --bowtie-path $bowtiepath \
+  --index-genome \
+  -q  \
+  $chrfa $refdir/$runid
   
 
 ## calculate expression and run pRSEM using Pol II ChIP-seq
-#mkdir -p $expr_polII_dir
-#$demodir/RSEM/rsem-calculate-expression \
-# --estimate-rspd \
-# --seed 12345 \
-# --num-threads $nthr \
-# --paired-end \
-# --forward-prob 0 \
-# --keep-intermediate-files \
-# --calc-pme \
-# --gibbs-number-of-samples $nsteps \
-# --quiet \
-# --star \
-# --star-path $starpath \
-# --gzipped-read-file \
-# --sort-bam-by-read-name \
-# --sort-bam-buffer-size $sort_bam_buffer_size \
-# --run-pRSEM \
-# --partition-model $partition_model_pk \
-# --mappability-bigwig-file $fmpp_bigwig \
-# --chipseq-target-read-files $chipseq_target_rep1,$chipseq_target_rep2 \
-# --chipseq-control-read-files $chipseq_control_rep1 \
-# --bowtie-path $bowtiepath \
-# $rnaseq_rd1 $rnaseq_rd2 $refdir/$runid $expr_polII_dir/$runid
+ mkdir -p $expr_polII_dir
+ $demodir/RSEM/rsem-calculate-expression \
+  --estimate-rspd \
+  --seed 12345 \
+  --num-threads $nthr \
+  --paired-end \
+  --forward-prob 0 \
+  --keep-intermediate-files \
+  --calc-pme \
+  --gibbs-number-of-samples $nsteps \
+  --quiet \
+  --star \
+  --star-path $starpath \
+  --gzipped-read-file \
+  --sort-bam-by-read-name \
+  --sort-bam-buffer-size $sort_bam_buffer_size \
+  --run-pRSEM \
+  --partition-model $partition_model_pk \
+  --mappability-bigwig-file $fmpp_bigwig \
+  --chipseq-target-read-files $chipseq_target_rep1,$chipseq_target_rep2 \
+  --chipseq-control-read-files $chipseq_control_rep1 \
+  --bowtie-path $bowtiepath \
+  $rnaseq_rd1 $rnaseq_rd2 $refdir/$runid $expr_polII_dir/$runid
 
 
 ## calculate expression and run pRSEM using four histone modification ChIP-seq
