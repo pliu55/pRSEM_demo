@@ -5,15 +5,15 @@ RSEM = RSEM/to_make.flag
 
 .PHONY : all clean
 
-all : ${BOWTIE} ${CHROM} ${STAR} ${RSEM}
+all : ${BOWTIE} ${STAR} ${RSEM}
 
-${CHROM} :
-	if [ ! -e $@ ]; then cd ${@D} ; \
-	wget -nc ftp://hgdownload.soe.ucsc.edu/goldenPath/mm10/chromosomes/$(@F).gz; \
-	gzip -d $(@F).gz; \
-	chmod -w $(@F); \
-	cd ../; \
-	fi
+# ${CHROM} :
+##if [ ! -e $@ ]; then cd ${@D} ; \
+##wget -nc ftp://hgdownload.soe.ucsc.edu/goldenPath/mm10/chromosomes/$(@F).gz; \
+##gzip -d $(@F).gz; \
+##chmod -w $(@F); \
+##cd ../; \
+##fi
 
 ${BOWTIE} : 
 	cd ${@D}; ${MAKE} all

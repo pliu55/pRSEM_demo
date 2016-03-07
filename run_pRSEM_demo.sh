@@ -20,8 +20,8 @@ partition_model_pk='pk'
 nsteps=100
 
 fgtf_gz="$inputdir/${chrom}.gtf.gz"
-chrfa_gz="$inputdir/${chrom}.fa.gz"
 fgtf="$inputdir/${chrom}.gtf"
+chrfa_gz="$inputdir/${chrom}.fa.gz"
 chrfa="$inputdir/${chrom}.fa"
 rnaseq_rd1="$inputdir/mmliver_1.fq.gz"
 rnaseq_rd2="$inputdir/mmliver_2.fq.gz"
@@ -37,30 +37,27 @@ H3K4me2_reads="$inputdir/H3K4me2.fastq.gz"
 H3K4me3_reads="$inputdir/H3K4me3.fastq.gz"
 
 
+
+## install pRSEM, STAR, and bowtie
+ make
+
+## create $fgtf
+if [ ! -f $fgtf ]
+  then
+    zcat $fgtf_gz > $fgtf
+fi
+
+## create $chrfa
+if [ ! -f $chrfa ]
+  then
+    zcat $chrfa_gz > $chrfa
+fi
+
 ## remove output/ if exists
  if [ -e $outputdir ] 
    then
      rm -fr $outputdir
  fi
-
-## create $fgtf
-if [ ! -f $fgtf ]
-  then
-    cd $inputdir
-    zcat $fgtf_gz > $fgtf
-fi
-
-## prepare $chrfa
-if [ ! -f $chrfa ]
-  then
-    cd $inputdir
-    zcat $chrfa_gz > $chrfa
-fi
-
-
-## install pRSEM, STAR, and bowtie
- make
-
 
 ## prepare reference
  mkdir -p $refdir
