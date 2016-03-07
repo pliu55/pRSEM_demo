@@ -93,18 +93,20 @@ All output files will be stored in the following four folders under __output/__:
 | __geneid__  | gene ID from input anntation        |
 |__chrom__    | isoform's chromosome name |
 |__strand__   | isoform's strand name |
-|__start__    | isoform's end with the lowest genomic loci |
-|__end__      | isoform's end with the highest genomic loci |
-|__tss_mpp__  | average mappability of [TSS-500bp, TSS+500bp], where TSS is isoform's transcription start site, i.e. 5'-end |
-|__body_mpp__ | average mappability of (TSS+500bp, TES-500bp), where TES is isoform's transcription end site, i.e. 3'-end |
+|__start__    | TSS if isoform is on '+' strand; TES if isoform is on '-' strand; where TSS is isoform's transcription start site, i.e. 5'-end, TES is isoform's transcript end site, i.e. 3'-end|
+|__end__      | TES if isoform is on '+' strand; TSS if isoform is on '-' strand |
+|__tss_mpp__  | average mappability of [TSS-500bp, TSS+500bp] |
+|__body_mpp__ | average mappability of (TSS+500bp, TES-500bp) |
 | __tes_mpp__ | average mappability of [TES-500bp, TES+500bp] |
 |__pme_count__| isoform's fragment or read count from RSEM's posterior mean estimates |
-|__tss__      | isoform's TSS loci  |
+|__tss__      | isoform's TSS |
 |__tss_pk__   | equal to 1 if isoform's [TSS-500bp, TSS+500bp] region overlaps with a RNA Pol II peak; 0 otherwise |
 |__is_training__| equal to 1 if isoform is in the training set where Pol II prior is learned; 0 otherwise |
-- __demo_prsem.all_tr_prior__: prior parameters for every isoform. This file does not have a header. Each line contains a prior parameter and an isoform's transcript ID delimited by `  # `.
-- __demo_uniform_prior_1.gene.results__: RSEM's posterior mean estimates on the gene level with an initial pseudo-count of one for every isoform 
-- __demo_uniform_prior_1.isoform.results__: RSEM's posterior mean estimates on the isoform level with an initial pseudo-count of one for every isoform 
+|__partition__| group number that isoform was partitioned to|
+
+  * __demo_prsem.all_tr_prior__: prior parameters for every isoform. This file does not have a header. Each line contains an isoform's prior parameter and its transcript ID delimited by `  # `.
+  * __demo_uniform_prior_1.gene.results__: RSEM's posterior mean estimates on the gene level with an initial pseudo-count of one for every isoform 
+  * __demo_uniform_prior_1.isoform.results__: RSEM's posterior mean estimates on the isoform level with an initial pseudo-count of one for every isoform 
 
 In order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final outputs may have variations.
 
