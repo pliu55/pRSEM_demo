@@ -123,9 +123,16 @@ All output files will be stored in the following four folders under __output/__:
     |__H3K4me3__   | normalized H3K4me3 signals (in RPKM) of isoform's [TSS-500, TSS+500]|
     |__prd_expr_prob__| probability of being expressed from a logistic regression model |
     |__prior__     | isoform's prior parameter|
+    
   * __demo_prsem.lgt_mdl.RData__: It stores an R logistic regression object, which was obtained based on four histone modification signals and fragment counts of isoforms in the training set.
 
-In order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final quantification results may vary from time to time.
+- __consistency_test_histone_PolII/__: output files from pRSEM's consistency test. Test results are saved in __demo.all.pval_LL__. All the other files are similar to those in __quantification_results_PolII__/ and __quantification_results_histone__/.
+  * __demo.all.pval__LL__: contains three lines 
+    - line 1: Header
+    - line 2: Consistency test result when using four histone modification ChIP-seq data as the external data for RNA-seq quantification
+    - line 3: Consistency test result when using Pol II peaks as the external data for RNA-seq quantification 
+
+Please note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final quantification results may vary from time to time.
 
 ## <a name="Contact"></a> Contact
 Got a question? Please post it at [RSEM Users group](https://groups.google.com/forum/#!forum/rsem-users) with keyword __pRSEM__ in the title.  
