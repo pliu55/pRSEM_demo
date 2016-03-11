@@ -67,7 +67,8 @@ fi
   --star-path $starpath \
   -p $nthr \
   --bowtie-path $bowtiepath \
-  --index-genome \
+  --prep-pRSEM \
+  --mappability-bigwig-file $fmpp_bigwig \
   -q  \
   $chrfa $refdir/$runid
   
@@ -91,7 +92,6 @@ fi
   --sort-bam-buffer-size $sort_bam_buffer_size \
   --run-pRSEM \
   --partition-model $partition_model_pk \
-  --mappability-bigwig-file $fmpp_bigwig \
   --chipseq-target-read-files $chipseq_target_rep1,$chipseq_target_rep2 \
   --chipseq-control-read-files $chipseq_control_rep1 \
   --bowtie-path $bowtiepath \
@@ -116,7 +116,6 @@ fi
   --sort-bam-by-read-name \
   --sort-bam-buffer-size $sort_bam_buffer_size \
   --run-pRSEM \
-  --mappability-bigwig-file $fmpp_bigwig \
   --chipseq-read-files-multi-targets $H3K27Ac_reads,$H3K4me1_reads,$H3K4me2_reads,$H3K4me3_reads \
   --bowtie-path $bowtiepath \
   $rnaseq_rd1 $rnaseq_rd2 $refdir/$runid $expr_histone_dir/$runid
@@ -128,7 +127,6 @@ cp -r $expr_histone_dir $test_histone_dir
   --num-threads $nthr \
   --keep-intermediate-files \
   --quiet \
-  --mappability-bigwig-file $fmpp_bigwig \
   --chipseq-read-files-multi-targets $H3K27Ac_reads,$H3K4me1_reads,$H3K4me2_reads,$H3K4me3_reads \
   --bowtie-path $bowtiepath \
   $refdir/$runid $test_histone_dir/$runid
@@ -139,6 +137,5 @@ cp -r $expr_histone_dir $test_histone_dir
   --num-threads $nthr \
   --keep-intermediate-files \
   --quiet \
-  --mappability-bigwig-file $fmpp_bigwig \
   --chipseq-peak-file $polII_chipseq_peak \
   $refdir/$runid $test_histone_dir/$runid
