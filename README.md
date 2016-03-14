@@ -26,7 +26,7 @@ This repository is a mini-example for running pRSEM. It contains all the require
 ## <a name="Download"></a> Download
 There are two ways to download this demo and all three required submodules
 - Download the [tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.2/pRSEM_demo_and_AllSubmodules.tar.gz) or [ zip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.2/pRSEM_demo_and_AllSubmodules.zip) via https. They are also listed on [the release page](https://github.com/pliu55/pRSEM_demo/releases) with name __pRSEM_demo_and_AllSubmodules__ 
-- Use git command: `git clone --recursive git@github.com:pliu55/pRSEM_demo`
+- Use a git command: `git clone --recursive git@github.com:pliu55/pRSEM_demo`
 
 ## <a name="System Requirements"></a> System Requirements
 - Linux
@@ -54,8 +54,8 @@ This script will carry out the following tasks:
 2. Prepare genome references for Bowtie, STAR, and RSEM
 3. Derive prior parameters from RNA Polymerase II ChIP-seq data and use them to quantify RNA-seq data
 4. Derive prior parameters from a combination of four histone modfication ChIP-seq data sets and use them to quantify RNA-seq data
-5. Perform a consistency test using a combination of four histone modification ChIP-seq data sets as the external data
-6. Perform a consistency test using RNA Polymerase II ChIP-seq peaks as the external data
+5. Perform a testing procedure using a combination of four histone modification ChIP-seq data sets as the external data
+6. Perform a testing procedure using RNA Polymerase II ChIP-seq peaks as the external data
 
 ## <a name="Input"></a> Input
 All of the following data sets are under the folder __input/__. The RNA-seq and PolII ChIP-seq data were derived from [ENCODE2 mouse Mel cell line](https://www.encodeproject.org/biosamples/ENCBS049ENC/). Although they are derived from a cell line rather than from tissue, we named them with keyword __mmliver__ just to be consistent with the examples given in RSEM's documentation. The four histone modification ChIP-seq data sets were derived from [Lara-Astiaso and Weiner et al. *Science* 2014 345:943](http://science.sciencemag.org/content/345/6199/943.full). 
@@ -126,11 +126,11 @@ All output files will be stored in the following four folders under __output/__:
     
   * __demo_prsem.lgt_mdl.RData__: It stores an R logistic regression object, which was obtained based on four histone modification signals and fragment counts of isoforms in the training set.
 
-- __consistency_test_histone_PolII/__: output files from pRSEM's consistency test. Test results are saved in __demo.all.pval_LL__. All the other files are similar to those in __quantification_results_PolII__/ and __quantification_results_histone__/.
+- __testing_procedure_histone_PolII/__: output files from pRSEM's testing procedure. Test results are saved in __demo.all.pval_LL__. All the other files are similar to those in __quantification_results_PolII__/ and __quantification_results_histone__/.
   * __demo.all.pval__LL__: contains three lines 
     - line 1: Header
-    - line 2: Consistency test result when using four histone modification ChIP-seq data as the external data for RNA-seq quantification
-    - line 3: Consistency test result when using Pol II peaks as the external data for RNA-seq quantification 
+    - line 2: Testing procedure result when using four histone modification ChIP-seq data as the external data for RNA-seq quantification
+    - line 3: Testing procedure result when using Pol II peaks as the external data for RNA-seq quantification 
 
 Please note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final quantification results may vary from time to time.
 
