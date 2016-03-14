@@ -10,7 +10,7 @@ outputdir="$demodir/output/"
 refdir="$outputdir/genome_references/"
 expr_polII_dir="$outputdir/quantification_results_PolII/"
 expr_histone_dir="$outputdir/quantification_results_histone/"
-test_histone_dir="$outputdir/consistency_test_histone_PolII/"
+test_histone_dir="$outputdir/testing_procedure_histone_PolII/"
 
 runid='demo'
 chrom='chr19'
@@ -122,8 +122,8 @@ fi
 
 
 cp -r $expr_histone_dir $test_histone_dir
-## run consistency test using four histone modification ChIP-seq
- $demodir/RSEM/rsem-run-prsem-consistency-test \
+## run a testing procedure using four histone modification ChIP-seq
+ $demodir/RSEM/rsem-run-prsem-testing-procedure \
   --num-threads $nthr \
   --keep-intermediate-files \
   --quiet \
@@ -132,8 +132,8 @@ cp -r $expr_histone_dir $test_histone_dir
   $refdir/$runid $test_histone_dir/$runid
 
 
-## run consistency test using PolII ChIP-seq peak
- $demodir/RSEM/rsem-run-prsem-consistency-test \
+## run a testing procedure using PolII ChIP-seq peak
+ $demodir/RSEM/rsem-run-prsem-testing-procedure \
   --num-threads $nthr \
   --keep-intermediate-files \
   --quiet \
