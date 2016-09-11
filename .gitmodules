@@ -1,15 +1,12 @@
 [submodule "STAR"]
 	path = STAR
   url = git@github.com:alexdobin/STAR
- #url = https://github.com/alexdobin/STAR
 	branch = 2.4.0h
-  ignore = untracked
-[submodule "RSEM"]
-	path = RSEM
-	url = git@github.com:pliu55/RSEM
-	branch = pRSEM
   ignore = untracked
 [submodule "bowtie"]
 	path = bowtie
 	url = git@github.com:BenLangMead/bowtie
   ignore = untracked
+[submodule "RSEM"]
+	path = RSEM
+	url = git@github.com:deweylab/RSEM
