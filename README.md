@@ -33,14 +33,14 @@ There are two ways to download this demo and all three required submodules
 - Hard drive space > 2.5G
 - Perl version >= 5.8.8
 - Python version >= 2.7.3
-- R version >= 3.1.2
+- R version >= 3.3.1
 - POSIX Threads
 - Boost (C++ libraries)
 
 ## <a name="Submodules"></a> Submodules
 This demo requires three submodules:
-- [pRSEM](https://github.com/pliu55/RSEM/tree/pRSEM): prior-enhanced RSEM, version 1.2.22
-- [STAR](https://github.com/alexdobin/STAR/tree/2.4.0h): aligner for RNA-seq reads, version 2.4.0h
+- [pRSEM](https://github.com/deweylab/RSEM): prior-enhanced RSEM
+- [STAR](https://github.com/alexdobin/STAR/tree/2.5.2b): aligner for RNA-seq reads, version 2.5.2b
 - [Bowtie](http://bowtie-bio.sourceforge.net/index.shtml): aligned for ChIP-seq reads, version 1.0.1
 
 ## <a name="Usage"></a> Usage
