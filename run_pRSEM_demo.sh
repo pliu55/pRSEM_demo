@@ -84,12 +84,11 @@ fi
   --keep-intermediate-files \
   --calc-pme \
   --gibbs-number-of-samples $nsteps \
+  --no-bam-output \
   --quiet \
   --star \
   --star-path $starpath \
-  --gzipped-read-file \
-  --sort-bam-by-read-name \
-  --sort-bam-buffer-size $sort_bam_buffer_size \
+  --star-gzipped-read-file \
   --run-pRSEM \
   --partition-model $partition_model_pk \
   --chipseq-target-read-files $chipseq_target_rep1,$chipseq_target_rep2 \
@@ -109,18 +108,21 @@ fi
   --keep-intermediate-files \
   --calc-pme \
   --gibbs-number-of-samples $nsteps \
+  --no-bam-output \
   --quiet \
   --star \
   --star-path $starpath \
-  --gzipped-read-file \
-  --sort-bam-by-read-name \
-  --sort-bam-buffer-size $sort_bam_buffer_size \
+  --star-gzipped-read-file \
   --run-pRSEM \
   --chipseq-read-files-multi-targets $H3K27Ac_reads,$H3K4me1_reads,$H3K4me2_reads,$H3K4me3_reads \
   --bowtie-path $bowtiepath \
   $rnaseq_rd1 $rnaseq_rd2 $refdir/$runid $expr_histone_dir/$runid
 
 
+if [ -e $test_histone_dir ] 
+  then
+    rm -fr $test_histone_dir
+fi
 cp -r $expr_histone_dir $test_histone_dir
 ## run a testing procedure using four histone modification ChIP-seq
  $demodir/RSEM/rsem-run-prsem-testing-procedure \
