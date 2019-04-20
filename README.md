@@ -6,7 +6,7 @@ Table of Contents
 
 * [Introduction](#Introduction)
 * [Download](#Download)
-* [System Requirements](#System Requirements)
+* [System Requirements](#SystemRequirements)
 * [Submodules](#Submodules)
 * [Usage](#Usage)
 * [Input](#Input)
@@ -28,7 +28,7 @@ There are two ways to download this demo and all three required submodules
 - Download the [tar ball](https://github.com/pliu55/pRSEM_demo/releases/download/v0.2/pRSEM_demo_and_AllSubmodules.tar.gz) or [ zip file](https://github.com/pliu55/pRSEM_demo/releases/download/v0.2/pRSEM_demo_and_AllSubmodules.zip) via https. They are also listed on [the release page](https://github.com/pliu55/pRSEM_demo/releases) with name __pRSEM_demo_and_AllSubmodules__ 
 - Use a git command: `git clone --recursive git@github.com:pliu55/pRSEM_demo`
 
-## <a name="System Requirements"></a> System Requirements
+## <a name="SystemRequirements"></a> System Requirements
 - Linux
 - Hard drive space > 2.5G
 - Perl version >= 5.8.8
@@ -135,7 +135,7 @@ All output files will be stored in the following four folders under __output/__:
 Please note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final quantification results may vary from time to time.
 
 ## <a name="Contact"></a> Contact
-Got a question? Please post it at [RSEM Users group](https://groups.google.com/forum/#!forum/rsem-users) with keyword __pRSEM__ in the title.  
+Got a question? Please post it at [RSEM's GitHub Issues page](https://github.com/deweylab/RSEM/issues) with the keyword __pRSEM__ in the title.  
 
 ## <a name="License"></a> License
 This demo is licensed under the [GNU General Public License
