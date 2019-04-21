@@ -135,7 +135,7 @@ All output files will be stored in the following four folders under __output/__:
 Please note that, in order to shorten the running time as much as possible, the input ChIP-seq and RNA-seq files were prepared in extremely small (and unrealistic) sizes, and Gibbs sampling were set to run in just 100 instead of the default 1000 steps. As a result, the final quantification results may vary from time to time.
 
 ## <a name="Contact"></a> Contact
-Got a question? Please post it at [RSEM's GitHub Issues page](https://github.com/deweylab/RSEM/issues) with the keyword __pRSEM__ in the title.  
+Got a question? Please post it at [RSEM's GitHub Issues page](https://github.com/deweylab/RSEM/issues) with __@pliu55__ mentioned.  
 
 ## <a name="License"></a> License
 This demo is licensed under the [GNU General Public License
